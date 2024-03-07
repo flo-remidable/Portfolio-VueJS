@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "vue-project",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - vue-project",
+			"detail": "vite build"
+		}
+	]
+}
