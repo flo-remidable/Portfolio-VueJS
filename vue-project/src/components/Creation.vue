@@ -33,7 +33,56 @@
 <script>
   export default {
   name: "Creation",
+
+  mounted() {
+    let images1 = document.getElementsByClassName("img-cv");
+    let images2 = document.getElementsByClassName("img-commentaire");
+    let images3 = document.getElementsByClassName("img-paysagiste");
+    let modal = document.getElementById("modal");
+    let modalContent = document.getElementById("img01"); 
+    let caption = document.getElementById("caption");
+    let closeBtn = document.getElementsByClassName("close");
+
+    for (let i = 0; i < images1.length; i++) {
+      images1[i].onclick = function () {
+        modal.style.display = "block";
+        modalContent.src = this.src;
+        modalContent.alt = this.alt;
+        caption.innerHTML = this.alt;
+      };
+    }
+
+    for (let i = 0; i < images2.length; i++) {
+      images2[i].onclick = function () {
+        modal.style.display = "block";
+        modalContent.src = this.src;
+        modalContent.alt = this.alt;
+        caption.innerHTML = this.alt;
+      };
+    }
+
+    for (let i = 0; i < images3.length; i++) {
+      images3[i].onclick = function () {
+        modal.style.display = "block";
+        modalContent.src = this.src;
+        modalContent.alt = this.alt;
+        caption.innerHTML = this.alt;
+      };
+    }
+
+    for (let i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].onclick = function () {
+        modal.style.display = "none";
+      };
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
   }
+};
 </script>
 
 
