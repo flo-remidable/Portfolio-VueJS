@@ -29,7 +29,44 @@
 <script>
   export default {
   name: "Contact",
-  }
+
+  mounted() {
+    const formElement = document.body.querySelector('form');
+    formElement.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const firstNameInput = document.body.querySelector('#prénom');
+      const lastNameInput = document.body.querySelector('#nom');
+      const commentTextarea = document.body.querySelector('#message');
+      const errorElement = document.body.querySelector('#error-message');
+
+      if (!firstNameInput.value || !lastNameInput.value || !commentTextarea.value) {
+        errorElement.style.display = 'block';
+        return;
+      } else {
+        errorElement.style.display = 'none';
+      }
+
+      try {
+        const response = await fetch('https://formspree.io/f/xbjnjone', {
+          method: 'POST',
+          body: new FormData(formElement),
+        });
+
+        if (response.ok) {
+          console.log('Formulaire envoyé avec succès');
+        } else {
+          console.error('Erreur lors de l\'envoi du formulaire');
+        }
+      } catch (error) {
+        console.error('Erreur lors de l\'envoi du formulaire:', error);
+      }
+
+      formElement.reset();
+      errorElement.style.display = 'none';
+    });
+  },
+};
 </script>
 
 
