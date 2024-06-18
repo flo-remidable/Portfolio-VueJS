@@ -10,26 +10,29 @@ export default {
 };
 </script>
 
-
+<!-- Menue de navigation -->
 
 <template>
   <div>
     <header>
       <div class="wrapper"> 
         <h1>Mon Portfolio</h1>
-        <nav>
+      <nav>
+        <ul>
           <a href="#"><img src="../img/fleche.png" alt=""></a>
-          <a href="#presentation">Présentation</a>
-          <a href="#creation">Création</a>
-          <a href="#contact">Contact</a>           
-                    
-        </nav>
+          <li><router-link :to="{ name: 'home' }" active-class="current">Accueil</router-link></li>
+          <li><router-link :to="{ name: 'presentation' }" active-class="current">presentation</router-link></li>
+          <li><router-link :to="{ name: 'Creation' }" active-class="current">Creation</router-link></li>
+          <li><router-link :to="{ name: 'Contact' }" active-class="current">Contact</router-link></li>
+        </ul>
+      </nav>
 
       </div>
     </header>
     <RouterView />
 
-  
+  <!-- Footer -->
+
     <div id="footer">
       <footer>
           <div id="text-footer">
@@ -68,20 +71,21 @@ h1{
 
 
 
-nav {
+nav ul {
     background-color: rgb(20, 102, 156);
     display: flex;
     justify-content: space-around;
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     right: 0;
+    margin-top: 0;
 }
 
-nav a {
+nav ul li {
     color: white;
     font-size: 2rem;
-    text-decoration: none;
+    list-style-type: none;
 }
 
 nav a img{
@@ -91,6 +95,11 @@ nav a img{
 }
 
 nav a:hover{
+  background-color: hsla(180, 84%, 54%, 0.2);
+}
+
+nav ul li a.current {
+  text-decoration: underline;
   background-color: hsla(180, 84%, 54%, 0.2);
 }
 
