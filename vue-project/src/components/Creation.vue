@@ -22,7 +22,7 @@
     
     <div id="modal" class="modal">
       <span class="close">&times;</span>
-      <a href="https://github.com/flo-remidable" target="_blank"><img class="modal-content" id="img01" src=""></a>
+      <a href="https://github.com/flo-remidable" target="_blank"><img class="modal-content" id="img01" alt="" src=""></a>
       <div id="caption"></div>       
     </div>
   </div>

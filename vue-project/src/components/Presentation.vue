@@ -1,7 +1,7 @@
 <template>
     <div>
-        <main>
-            <div id="presentation">
+        
+            <div id="presentation-div">
               <h2 class="presentation-titre">Présentation</h2>
   
               <div class="presentation-content">
@@ -12,7 +12,7 @@
                 durant ma formation et ainsi vous montrer mon savoir faire acquis jusqu'a présent.
               </div>
             </div>
-        </main>
+      
   
   
   
@@ -34,7 +34,7 @@
   }
   
   
-  #presentation{
+  #presentation-div{
       display: flex;
       flex-direction: column;
       align-items: center; 

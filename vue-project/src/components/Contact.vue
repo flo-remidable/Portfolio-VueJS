@@ -1,6 +1,6 @@
 <template>
     <div>
-      <section id="contact">
+      <section id="contact-section">
           <h2 class="contact-titre">Pour me contacter</h2>
           <div id="error-message">
             Tous les champs doivent être remplis !!
@@ -96,12 +96,11 @@
 }
 
 
-#contact{
+#contact-section{
     display: flex;  
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    background-color: rgb(20, 102, 156)
 }
 
 #error-message{

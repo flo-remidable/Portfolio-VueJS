@@ -19,7 +19,7 @@ export default {
         <h1>Mon Portfolio</h1>
       <nav>
         <ul>
-          <a href="#"><img src="../img/fleche.png" alt=""></a>
+          <li><a href="#"><img src="../img/fleche.png" alt=""></a></li>
           <li><router-link :to="{ name: 'home' }" active-class="current">Accueil</router-link></li>
           <li><router-link :to="{ name: 'presentation' }" active-class="current">presentation</router-link></li>
           <li><router-link :to="{ name: 'Creation' }" active-class="current">Creation</router-link></li>
