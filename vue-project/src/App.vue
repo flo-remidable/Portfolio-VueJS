@@ -140,6 +140,6 @@ nav ul li a.current {
     color: white;
     font-size: 1.2rem;
     margin-bottom: -10px;
-};
+}
 </style>
 
