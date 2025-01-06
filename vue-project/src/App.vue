@@ -36,7 +36,7 @@ export default {
     <div id="footer">
       <footer>
           <div id="text-footer">
-            <small>@copyright 2023</small>
+            <small>@copyright 2025</small>
             <p>dernière mise à jour le xx/xx/xxxx</p>
           </div>
           <a href="**" target="_blank">
