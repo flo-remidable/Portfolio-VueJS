@@ -5,6 +5,9 @@
           <div id="error-message">
             Tous les champs doivent être remplis !!
           </div>
+          <div id="good-message">
+            Envoyer avec succés !!
+          </div>
           <div id="form-content">
             <form action="https://formspree.io/f/xbjnjone" method="post" id="form">
               <div id="nom-prenom">
@@ -39,12 +42,16 @@
       const lastNameInput = document.body.querySelector('#nom');
       const commentTextarea = document.body.querySelector('#message');
       const errorElement = document.body.querySelector('#error-message');
+      const goodMessage = document.body.querySelector('#good-message');
 
       if (!firstNameInput.value || !lastNameInput.value || !commentTextarea.value) {
         errorElement.style.display = 'block';
+        goodMessage.style.display = 'none';
         return;
-      } else {
+      } else if (firstNameInput.value && lastNameInput.value && commentTextarea.value) {
+        goodMessage.style.display = 'block';
         errorElement.style.display = 'none';
+        return;
       }
 
       try {
@@ -106,6 +113,12 @@
 #error-message{
     display: none;
     background-color: red;
+    font-size: 1.3rem;
+}
+
+#good-message{
+    display: none;
+    background-color: rgb(19, 161, 38);
     font-size: 1.3rem;
 }
 
